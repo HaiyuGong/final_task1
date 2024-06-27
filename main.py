@@ -12,7 +12,7 @@ import time
 # 设置数据路径
 batch_size = 128
 dropout = 0.5
-num_epochs = 300
+num_epochs = 3
 lr = 0.0005
 pretrained = 0
 optm = "adam"
@@ -52,8 +52,8 @@ val_transforms = transforms.Compose([
 
 #     def __len__(self):
 #         return len(self.dataset)
-cifar100_training = CIFAR100(root='./data', train=True, download=True, transform=train_transforms)
-cifar100_testing = CIFAR100(root='./data', train=False, download=True, transform=val_transforms)
+cifar100_training = CIFAR100(root='../datasets/cifar100', train=True, download=True, transform=train_transforms)
+cifar100_testing = CIFAR100(root='../datasets/cifar100', train=False, download=True, transform=val_transforms)
 print(len(cifar100_training), len(cifar100_testing))
 
 # 定义 DataLoader
@@ -92,7 +92,7 @@ suffix_num = timestamp_str = str(int(time.time()))[-6:]
 writer = SummaryWriter(
     log_dir=f'runs/resnet18_pretrained{pretrained}_lr{lr}_epoch{num_epochs}_dropout{dropout}_{optm}_lrsch{lrsch}_{suffix_num}')
 
-model = model.cuda()
+model = model.to(device)
 
 # 训练模型
 best_acc = 0.0
@@ -100,7 +100,7 @@ for epoch in range(num_epochs):
     model.train()
     train_loss, train_correct, train_total = 0.0, 0, 0
     for inputs, labels in train_loader:
-        inputs, labels = inputs.cuda(), labels.cuda()
+        inputs, labels = inputs.to(device), labels.to(device)
 
         optimizer.zero_grad()
         outputs = model(inputs)
@@ -123,7 +123,7 @@ for epoch in range(num_epochs):
     test_loss, test_correct, test_total = 0.0, 0, 0
     with torch.no_grad():
         for inputs, labels in val_loader:
-            inputs, labels = inputs.cuda(), labels.cuda()
+            inputs, labels = inputs.to(device), labels.to(device)
 
             outputs = model(inputs)
             loss = criterion(outputs, labels)

@@ -1,0 +1,8 @@
+[2024-06-27 20:59:17,518][__main__][INFO] - Base model: resnet18
+[2024-06-27 20:59:17,518][__main__][INFO] - feature dim: 512, projection dim: 256
+[2024-06-27 21:02:02,833][__main__][INFO] - Base model: resnet18
+[2024-06-27 21:02:02,834][__main__][INFO] - feature dim: 512, projection dim: 256
+[2024-06-27 21:04:36,352][__main__][INFO] - Base model: resnet18
+[2024-06-27 21:04:36,352][__main__][INFO] - feature dim: 512, projection dim: 256
+[2024-06-27 21:05:29,466][__main__][INFO] - Base model: resnet18
+[2024-06-27 21:05:29,466][__main__][INFO] - feature dim: 512, projection dim: 256
