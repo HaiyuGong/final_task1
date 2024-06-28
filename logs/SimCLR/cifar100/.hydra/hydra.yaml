@@ -130,18 +130,18 @@ hydra:
   runtime:
     version: 1.3.2
     version_base: '1.1'
-    cwd: /root/final_task1
+    cwd: /hy-tmp/final_task1
     config_sources:
     - path: hydra.conf
       schema: pkg
       provider: hydra
-    - path: /root/final_task1
+    - path: /hy-tmp/final_task1
       schema: file
       provider: main
     - path: ''
       schema: structured
       provider: schema
-    output_dir: /root/final_task1/logs/SimCLR/cifar100
+    output_dir: /hy-tmp/final_task1/logs/SimCLR/cifar100
     choices:
       hydra/env: default
       hydra/callbacks: null

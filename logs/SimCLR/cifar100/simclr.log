@@ -6,3 +6,25 @@
 [2024-06-27 21:04:36,352][__main__][INFO] - feature dim: 512, projection dim: 256
 [2024-06-27 21:05:29,466][__main__][INFO] - Base model: resnet18
 [2024-06-27 21:05:29,466][__main__][INFO] - feature dim: 512, projection dim: 256
+[2024-06-27 21:32:37,921][__main__][INFO] - Base model: resnet18
+[2024-06-27 21:32:37,921][__main__][INFO] - feature dim: 512, projection dim: 256
+[2024-06-27 21:33:43,013][__main__][INFO] - Base model: resnet18
+[2024-06-27 21:33:43,013][__main__][INFO] - feature dim: 512, projection dim: 256
+[2024-06-27 21:34:41,518][__main__][INFO] - Base model: resnet18
+[2024-06-27 21:34:41,518][__main__][INFO] - feature dim: 512, projection dim: 256
+[2024-06-27 22:52:24,250][__main__][INFO] - ==> Save checkpoint. Train epoch 50, SimCLR loss: 4.3428
+[2024-06-28 00:23:22,399][__main__][INFO] - ==> Save checkpoint. Train epoch 100, SimCLR loss: 4.3276
+[2024-06-28 01:56:02,209][__main__][INFO] - ==> Save checkpoint. Train epoch 150, SimCLR loss: 4.3211
+[2024-06-28 03:29:00,176][__main__][INFO] - ==> Save checkpoint. Train epoch 200, SimCLR loss: 4.3161
+[2024-06-28 05:02:10,369][__main__][INFO] - ==> Save checkpoint. Train epoch 250, SimCLR loss: 4.3132
+[2024-06-28 06:35:08,385][__main__][INFO] - ==> Save checkpoint. Train epoch 300, SimCLR loss: 4.3091
+[2024-06-28 07:54:59,066][__main__][INFO] - ==> Save checkpoint. Train epoch 350, SimCLR loss: 4.3064
+[2024-06-28 09:12:40,209][__main__][INFO] - ==> Save checkpoint. Train epoch 400, SimCLR loss: 4.3035
+[2024-06-28 10:31:06,505][__main__][INFO] - ==> Save checkpoint. Train epoch 450, SimCLR loss: 4.3018
+[2024-06-28 11:53:41,945][__main__][INFO] - ==> Save checkpoint. Train epoch 500, SimCLR loss: 4.3001
+[2024-06-28 13:13:48,637][__main__][INFO] - ==> Save checkpoint. Train epoch 550, SimCLR loss: 4.2983
+[2024-06-28 14:31:41,994][__main__][INFO] - ==> Save checkpoint. Train epoch 600, SimCLR loss: 4.2975
+[2024-06-28 16:02:38,837][__main__][INFO] - ==> Save checkpoint. Train epoch 650, SimCLR loss: 4.2955
+[2024-06-28 17:20:45,558][__main__][INFO] - ==> Save checkpoint. Train epoch 700, SimCLR loss: 4.2955
+[2024-06-28 18:40:43,914][__main__][INFO] - ==> Save checkpoint. Train epoch 750, SimCLR loss: 4.2925
+[2024-06-28 19:58:40,692][__main__][INFO] - ==> Save checkpoint. Train epoch 800, SimCLR loss: 4.2908

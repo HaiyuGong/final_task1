@@ -1,3 +1,5 @@
 data/
 saved_models/
 *.pth
+__pycache__
+*.pt

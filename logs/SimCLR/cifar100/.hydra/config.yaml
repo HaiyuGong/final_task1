@@ -4,7 +4,7 @@ gpu: 0
 backbone: resnet18
 projection_dim: 256
 seed: 42
-batch_size: 128
+batch_size: 256
 workers: 16
 epochs: 1000
 log_interval: 50

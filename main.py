@@ -8,17 +8,23 @@ from torch.utils.data import DataLoader, random_split
 from torch.utils.tensorboard import SummaryWriter
 import os
 import time
+from torchvision.models import resnet18
+
+from models import SimCLR
 
 # 设置数据路径
 batch_size = 128
 dropout = 0.5
-num_epochs = 3
-lr = 0.0005
+num_epochs = 600
+lr = 0.00001
 pretrained = 0
 optm = "adam"
-lrsch = 1
+lrsch = 0
 
-device = torch.device("cuda:1")
+load_epoch = 700
+
+device = torch.device("cuda:0")
+
 # 定义数据预处理和增强
 train_transforms = transforms.Compose([
     # transforms.RandomResizedCrop(224),  # 随机裁剪并调整到指定大小
@@ -68,9 +74,12 @@ if pretrained == 1:
 elif pretrained == 0:
     model = models.resnet18(weights=None)
 elif pretrained == 2:
-    pass
+    base_encoder = eval('resnet18')
+    simclr_model = SimCLR(base_encoder, projection_dim=256)
+    simclr_model.load_state_dict(torch.load('./logs/SimCLR/cifar100/simclr_{}_epoch{}.pt'.format('resnet18', load_epoch)))
+    model = simclr_model.enc
 # 修改输出层大小为100
-num_ftrs = model.fc.in_features
+num_ftrs =models.resnet18(weights=None).fc.in_features
 model.fc = nn.Sequential(
     nn.Linear(num_ftrs, 100),
     nn.Dropout(dropout),
