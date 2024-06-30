@@ -15,15 +15,15 @@ from models import SimCLR
 # 设置数据路径
 batch_size = 128
 dropout = 0.5
-num_epochs = 600
+num_epochs = 200
 lr = 0.00001
-pretrained = 0
+pretrained = 1
 optm = "adam"
 lrsch = 0
 
-load_epoch = 700
+load_epoch = 1000
 
-device = torch.device("cuda:0")
+device = torch.device("cuda:1")
 
 # 定义数据预处理和增强
 train_transforms = transforms.Compose([
